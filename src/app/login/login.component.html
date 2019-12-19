@@ -1,0 +1,29 @@
+
+
+
+<body>
+    <form (ngSubmit)="onSubmit(f)" #f="ngForm">
+      
+<form action="#" >
+    <!-- TODO: Verify email -->
+
+    <label for="Email" >Email</label>
+    <input type="email" ngModel  name="email" id="email"  required>
+    <label for="password" >Password</label>
+    <input type="password"  ngModel name="password" id="password"  required>
+
+    <button [disabled]="f.invalid" type="submit">Connexion</button>
+  
+
+</form>
+
+<p class="login__signup">Don't have an account? &nbsp;<a  [routerLink]="['/signup']">Sign Up</a></p>
+
+</div>
+<!--
+// setter
+// localStorage.setItem("currentUsers",  JSON.stringify({firstName: "John"}));
+// getter
+// const user = JSON.parse(localStorage.getItem("currentUsers"));
+-->
+</body>

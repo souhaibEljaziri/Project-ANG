@@ -1,0 +1,24 @@
+<form (ngSubmit)="onSubmit(f)" #f="ngForm">
+    <div class="formCard"> 
+    <label for="lastname" >LastName</label>
+    <input type="text" name="lastname" id="lastname"
+     ngModel required>
+
+    <label for="name">Name</label>
+    <input type="text" name="name" id="name" 
+    ngModel required>
+    
+    <label for="email">Email</label>
+    <input type="email" name="email" id="email" 
+    ngModel required>
+
+    <label for="password">Password</label>
+    <input type="password" name="password"
+     id="password" ngModel required>
+    <button  [disabled]="f.invalid" type="submit">SignUp</button>
+
+    <p class="login__signup">Do you have an account? &nbsp;<a  [routerLink]="['/login']">Login Page</a></p>
+</div>
+</form>
+
+
